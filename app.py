@@ -5,8 +5,16 @@ Run locally with: streamlit run app.py
 
 from __future__ import annotations
 
+import site
+import sys
 from datetime import date, timedelta
+from pathlib import Path
 from typing import Dict
+
+# Automatically attach local .venv site-packages if Streamlit was launched from global Python
+for _venv_sp in (Path(__file__).resolve().parent / ".venv" / "lib").glob("python*/site-packages"):
+    if _venv_sp.exists() and str(_venv_sp) not in sys.path:
+        site.addsitedir(str(_venv_sp))
 
 import numpy as np
 import pandas as pd

@@ -82,6 +82,6 @@ pip install -r requirements.txt
 
 ### Launch the Streamlit Web Interface
 ```bash
-streamlit run app.py
+python3 -m streamlit run app.py
 ```
 The web interface will open automatically at `http://localhost:8501`.

@@ -6,11 +6,17 @@ from __future__ import annotations
 
 import hashlib
 import logging
+import site
+import sys
 import time
 from datetime import date, datetime
 from pathlib import Path
 from threading import RLock
 from typing import Dict, Optional, Tuple
+
+for _venv_sp in (Path(__file__).resolve().parent / ".venv" / "lib").glob("python*/site-packages"):
+    if _venv_sp.exists() and str(_venv_sp) not in sys.path:
+        site.addsitedir(str(_venv_sp))
 
 import numpy as np
 import pandas as pd
