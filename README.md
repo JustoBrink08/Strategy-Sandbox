@@ -1,13 +1,13 @@
-# QuantPulse: Vectorized Trading Strategy Backtester & Forward-Testing Engine
+# Strategy-Sandbox: Vectorized Trading Strategy Backtester & Forward-Testing Engine
 
-**QuantPulse** is a high-performance quantitative research and paper-trading web application built with **Streamlit**, **`yfinance`**, **vectorized `pandas`/`numpy`**, and **`APScheduler`**. It enables quantitative developers and traders to dynamically write custom Python trading logic, run sub-10ms vectorized historical backtests against a Buy-and-Hold benchmark, and deploy strategies to an asynchronous background forward-testing ("paper trading") engine.
+**Strategy-Sandbox** is a high-performance quantitative research and paper-trading web application built with **Streamlit**, **`yfinance`**, **vectorized `pandas`/`numpy`**, and **`APScheduler`**. It enables quantitative developers and traders to dynamically write custom Python trading logic, run sub-10ms vectorized historical backtests against a Buy-and-Hold benchmark, and deploy strategies to an asynchronous background forward-testing ("paper trading") engine.
 
 ---
 
 ## 1. Key Capabilities & Architecture
 
 ```text
-quant-trading-engine/
+Strategy-Sandbox/
 ├── app.py               # Streamlit UI: Strategy Input Window, Instant Backtester, Paper Trading Monitor
 ├── backtester.py        # Vectorized pandas/numpy execution engine & technical indicator library
 ├── data_loader.py       # Two-tier (RAM + local disk pickle) TTL-cached yfinance market data fetcher
@@ -74,7 +74,7 @@ df['signal'] = np.where(
 
 ### Installation
 ```bash
-cd quant-trading-engine
+cd Strategy-Sandbox
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt

@@ -27,7 +27,7 @@ from data_loader import clear_market_cache, fetch_market_data
 from forward_tester import ForwardTestingEngine
 
 st.set_page_config(
-    page_title="QuantPulse | Vectorized Backtest & Forward-Test Engine",
+    page_title="Strategy-Sandbox | Vectorized Backtest & Forward-Test Engine",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -224,7 +224,7 @@ def main() -> None:
                 st.toast(f"Cleared cache ({removed} files removed).", icon="🧹")
 
     # Header
-    st.title("📈 QuantPulse: Vectorized Strategy Backtester & Live Paper Trader")
+    st.title("📈 Strategy-Sandbox: Vectorized Strategy Backtester & Live Paper Trader")
     st.markdown(
         "Write custom vectorized Python trading strategies, backtest them instantaneously against cached `yfinance` data, "
         "and deploy winning strategies to the background **Forward-Testing Engine** (`APScheduler`) for continuous paper trading."
